@@ -1,0 +1,528 @@
+//
+//  Copyright (c) 2017 Ricoh Company, Ltd. All Rights Reserved.
+//  See LICENSE for more information.
+//
+
+$colParple1     : #bf3afc;
+$colParple2     : #fa84ff;
+
+$colOrange1     : #fd7272;
+
+$colBlack1      : #151416;
+$colBlack2      : #1b141e;
+$colBlack3      : #262223;
+
+$colGray1       : #474747; 
+$colGray2       : #705e75;
+$colGray3       : #ccc4ce;
+$colGray4       : #ecdbff;
+
+$colBlue1       : #305bfa;
+$colBlue2       : #5e75cc;
+
+$bgDefault      : $colParple2;
+$bgHighlight    : $colOrange1;
+$colDefault     : $colGray3;
+$colHighlight   : $colGray4;
+$dropDown       : false;
+$textColor      : $colGray3;
+$textColorRev   : $colGray1;
+$figureTextColor: $colGray3;
+$urlLinkColor   : $colBlue2;
+
+$navHeight               : 30px; // original: 50px.
+$navLineHeightOfAnchor   : 20px;
+$navPaddingOfAnchor      : ($navHeight - $navLineHeightOfAnchor)/2;
+$navMarginOfToggleButton : 8 - (50 - $navHeight)/2;
+$bottomMarginOfFormGroup :  9px; // original: 15px.
+$marginOfHr              :  9px; // original: 20px.
+$paddingOfBtn            :  4px; // original  6px.
+
+$radioIconFont:       "Ionicons"; // or FontAwesome
+$radioNormalContent:  "\f3a6";    // or "\f111" for FontAwesome
+$radioCheckedContent: "\f3a7";    // or "\f192" for FontAwesome
+
+
+// http://work.smarchal.com/twbscolor/
+.navbar-default {
+  color: $textColor;
+  background-color: $colParple1;
+  background: -prefix-linear-gradient(left, $colParple1, $bgHighlight);
+  background: linear-gradient(to right, $colParple1, $bgHighlight);
+  min-height: $navHeight;
+  border: none;
+  margin-bottom: 0px;
+
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        padding-top: $navPaddingOfAnchor;
+        padding-bottom: $navPaddingOfAnchor;
+        line-height: $navLineHeightOfAnchor;
+        &:hover,  &:focus {
+          color: $colHighlight; }}
+      @if $dropDown {
+        > .dropdown-menu {
+          background-color: $bgDefault;
+          > li {
+            > a {
+              color: $colDefault;
+              &:hover,  &:focus {
+                color: $colHighlight;
+                background-color: $bgHighlight; }}
+            > .divider {
+              background-color: $bgHighlight;}}}}}
+    @if $dropDown {
+      .open .dropdown-menu > .active {
+        > a, > a:hover, > a:focus {
+          color: $colHighlight;
+          background-color: $bgHighlight; }}
+      .dropdown-header {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    @if $navMarginOfToggleButton > 0 {
+      margin-top: $navMarginOfToggleButton;
+      margin-bottom: $navMarginOfToggleButton;
+    } @else {
+      border: none;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-top: 9 + $navMarginOfToggleButton;
+      padding-bottom: 9 + $navMarginOfToggleButton;
+    }
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}
+
+.dropdown-menu {
+  color: $textColor;
+  background-color: $colBlack3;
+}
+.dropdown-menu .divider {
+  background-color: $colGray1 !important;
+}
+.dropdown-menu>li>select {
+    color: $textColor;
+    background-color: $colBlack3;
+}
+.dropdown-menu>li>a {
+    color: $textColor;
+    background-color: $colBlack3;
+}
+.dropdown-menu>li>a:hover {
+    color: $textColorRev;
+    background-color: $colGray3;
+}
+.dropdown-menu>li>a:focus {
+    color: $textColorRev;
+    background-color: $colGray3;
+}
+
+$bodyBgColor1   : $colBlack1;
+$bodyBgColor2   : $colBlack3;
+$sliderBaseColor : $colGray2;
+$sliderSelectColor : $colGray3;
+$bodyTextColor  : $colGray3;
+$btnDefaultColor : $colGray3;
+$btnBoaderColor : $colGray2;
+$btnPrimaryColor : $colGray1;
+
+//　tags
+body {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: $navHeight;
+  background-color: $bodyBgColor1;
+  color: $bodyTextColor;
+}
+
+hr {
+  border-color: $bodyBgColor2;
+  margin-top: $marginOfHr;
+  margin-bottom: $marginOfHr;
+}
+
+
+// application container
+.container {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+
+// bootstrap components.
+.modal-header, .modal-body, .modal-footer {
+  color: $bodyTextColor;
+  border-color: $btnBoaderColor;
+  background-color: $bodyBgColor2;
+}
+.modal-footer {
+  border-top: none;
+}
+
+.btn {
+  padding-top:    $paddingOfBtn;
+  padding-bottom: $paddingOfBtn;
+  background: $btnDefaultColor;
+  border-color: $btnBoaderColor;
+}
+
+.btn-primary {
+  background: $btnPrimaryColor;
+  border-color: $btnPrimaryColor;
+}
+
+.radio-inline {
+  padding-left: 1em;
+  min-width: 8em;
+  .radio-icon:before {
+    font-family: $radioIconFont;
+    content: $radioNormalContent + "\00a0";
+    font-size: 20px;
+    vertical-align: middle;
+    color: $colGray3;
+  }
+  input[type='radio'] {
+    display: none;
+    &:checked+.radio-icon:before {
+      content: $radioCheckedContent + "\00a0";
+      color: $bgDefault;
+    }
+  }
+  img {
+    display: block;
+    margin-left: 1.5em;
+  }
+}
+
+.form-group {
+  margin-bottom: $bottomMarginOfFormGroup;
+}
+
+.slider {
+  width: 390px !important;
+  margin-left: 1em;
+  margin-right: 4em;
+}
+.slider-tick-label {
+  vertical-align: top;
+}
+.slider-tick {
+  &.round {
+    background: url(../images/knob-mark.png) no-repeat;
+    border-radius: 0px;
+    box-shadow: none;
+    height: 26px;
+  }
+}
+.slider-track {
+  background: $sliderBaseColor !important;
+}
+.slider-selection {
+  background: $sliderSelectColor !important;
+}
+.slider-handle {
+  background: $bgDefault;
+}
+
+
+// custom classes.
+.settings-top {
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 23px;
+  padding-right: 23px;
+  width: 100%;
+  background-color: $bodyBgColor2;
+}
+.settings-append {
+  padding-top: 0px;
+  margin-top: -10px;
+  .checkbox:nth-child(1) {
+    margin-top: 0px;
+  }
+}
+.settings-body {
+  margin: 0px;
+  padding-top: 20px;
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+.btn-open-dialog {
+  &::after {
+    content: "\00a0...";
+  }
+}
+
+.btn-right-alignment {
+  display: flex;
+  margin-left: auto;
+}
+
+.param-label {
+  text-align: right;
+  &::after {
+    content: "\00a0:";
+  }
+}
+
+.emphasis {
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 2em;
+}
+
+.group-icon {
+  width: 26px;
+  height: 26px;
+  margin-bottom: -26px;
+  &.icon-image {
+    background: url(../images/image.png);
+  }
+  &.icon-volume {
+    background: url(../images/volume.png);
+  }
+  &.icon-led {
+    background: url(../images/led.png);
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 0px;
+  }
+}
+
+#application {
+  &[data-deviceId=""] .hide-when-nodevices {
+    display: none !important;
+  }
+  &[data-deviceId^="id:"] .hide-when-device-connected {
+    display: none !important;
+  }
+}
+
+#deviceInfo {
+  margin-left: 4px;
+}
+
+#DeviceInfo-placeholder {
+  color: $bodyTextColor;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#presetList {
+  >button {
+    margin-left: 4px;
+    border-radius: 4px;
+  }
+  li {
+    div {
+      display: inline-block;
+      &:nth-child(1) {
+        min-width: 100px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+#RGBGain-group {
+  label {
+    margin-left: 1.5em;
+    margin-right: 0.5em;
+    &::after {
+      content: "\00a0:";
+    }
+  }
+  .form-group {
+    margin-bottom: 8px;
+    @media (min-width: 768px) {
+      margin-left: -46px;
+    }
+  }
+  .fixed-slider-value {
+    margin-left: 1em;
+    display: inline-block;
+  }
+}
+
+#firmwareUpdateGuide-downloadFirmware .modal-body>div {
+  margin-bottom: 1em;
+}
+.download-url {
+  margin-left: 2em;
+  font-family: monospace;
+  cursor: pointer;
+  color: $urlLinkColor;
+}
+
+#StitchMode-group {
+  button {
+   margin-left: 1em;
+  }
+}
+
+#saveToPresetModal {
+  label {
+    margin-left: auto;
+    div.target {
+      padding-left: 0px;
+    }
+  }
+  .presetList-header {
+    width: 95%;
+    align-content: center;
+    .target {
+      padding-left: 2.5em;
+    }
+    .date {
+      padding-left: 2.5em;
+    }
+  }
+  .btn-group-vertical {
+    width: 95%;
+    .btn {
+      border-left: none;
+      border-right: none;
+      margin-bottom: 0px;
+      margin-right: -0.5em;
+      color: $textColor;
+      background: $bodyBgColor2;
+      &.active {
+        color: $textColorRev;
+        background: $colGray4;
+      }
+      &:hover, &:focus {
+        color: $textColorRev;
+        background: $colGray3;
+      }
+      &:nth-child(1) {
+        border-top: none;
+      }
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
+      div {
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+// usage block
+.usage {
+  p {
+    margin-left: 2em;
+  }
+  hr {
+    margin-top: 25px;
+  }
+  .figure {
+    position: relative;
+    margin-left: 12em;
+    div {
+      font-size: x-small;
+      color: $figureTextColor;
+    }
+  }
+  .figure-1 {
+    .ricoh-r-console {
+      position: absolute;
+      top: 35px;
+      left: 0px;
+    }
+    .hdmi-monitor {
+      position: absolute;
+      top: 215px;
+      left: 10px;
+    }
+    .power-cable {
+      position: absolute;
+      top: 227px;
+      left: 171px;
+    }
+  }
+  .figure-2 {
+    .led-indicator {
+      position: absolute;
+      top: 79px;
+      left: 123px;
+    }
+    .mode-button {
+      position: absolute;
+      top: 150px;
+      left: 123px;
+    }
+    .led-description {
+      position: absolute;
+      top: 60px;
+      left: 250px;
+      >div {
+        margin-bottom: 7px;
+      }
+      .square {
+        display: inline-block;
+        padding-top: 2px;
+        margin-left: -20px;
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+      }
+      .green {
+        .square {
+          background-color: lime;
+        }
+      }
+      .blue {
+        .square {
+          background-color: $colBlue1;
+        }
+      }
+      .red {
+        .square {
+          background-color: red;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "WhiteBalance": 1,
+  "RGBGain": "0:100:0",
+  "ExposureBiasCompensation": 2000,
+  "ZenithMode": 3,
+  "VideoOutput": 1,
+  "WDR": 3,
+  "StitchMode": 1,
+  "VideoBitrate": 8,
+  "AudioOutput": 0,
+  "AudioInputGain": 0,
+  "StandbyLedBrightness": 100,
+  "TransmittingLedBrightness": 100
+}

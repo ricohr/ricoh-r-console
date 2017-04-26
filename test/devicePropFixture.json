@@ -1,0 +1,165 @@
+{
+  "0000-0000-0000-0000": {
+    "initial": true,
+    "deviceInfo": {
+      "Manufacturer": "RICOH",
+      "Model": "R Development Kit",
+      "SerialNumber": "12345678",
+      "DeviceVersion": "0.00"
+    },
+    "sendConfigObject": true,
+    "getConfigObject": true,
+    "firmwareUpdate": true,
+    "deviceProps": {
+      "StillCaptureMode": {
+        "get_set": 0,
+        "factory_default_value": 32773,
+        "values": [32770, 32773, 32774]
+      },
+      "WhiteBalance": {
+        "factory_default_value": 2,
+        "values": [1, 2]
+      },
+      "RGBGain": {
+        "factory_default_value": "180:100:180",
+        "min": "0:100:0",
+        "max": "500:100:500",
+        "step": "1:0:1"
+      },
+      "ExposureBiasCompensation": {
+        "factory_default_value": 0,
+        "values": [-2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
+      },
+      "ZenithMode": {
+        "factory_default_value": 0,
+        "values": [0, 1, 2, 3]
+      },
+      "VideoOutput": {
+        "factory_default_value": 0,
+        "values": [0, 1]
+      },
+      "WDR": {
+        "factory_default_value": 0,
+        "values": [0, 1, 2, 3]
+      },
+      "StitchMode": {
+        "factory_default_value": 0,
+        "values": [0, 1]
+      },
+      "VideoBitrate": {
+        "factory_default_value": 16,
+        "values": [8, 16]
+      },
+      "AudioOutput": {
+        "factory_default_value": 1,
+        "values": [0, 1]
+      },
+      "AudioInputGain": {
+        "factory_default_value": 18,
+        "min": 0,
+        "max": 29,
+        "step": 1
+      },
+      "StandbyLedBrightness": {
+        "factory_default_value": 255,
+        "min": 0,
+        "max": 255,
+        "step": 1
+      },
+      "TransmittingLedBrightness": {
+        "factory_default_value": 255,
+        "min": 0,
+        "max": 255,
+        "step": 1
+      }
+    }
+  },
+  "0000-0000-0000-1000": {
+    "initial": false,
+    "deviceInfo": {
+      "Manufacturer": "ricoh",
+      "Model": "R DEVELOPMENT KIT",
+      "SerialNumber": "87654321",
+      "DeviceVersion": "0.01"
+    },
+    "sendConfigObject": true,
+    "getConfigObject": true,
+    "firmwareUpdate": true,
+    "deviceProps": {
+      "StillCaptureMode": {
+        "get_set": 0,
+        "factory_default_value": 32773,
+        "current": 32770,
+        "values": [32770, 32773, 32774]
+      },
+      "WhiteBalance": {
+        "factory_default_value": 2,
+        "current": 1,
+        "values": [1, 2]
+      },
+      "RGBGain": {
+        "factory_default_value": "180:100:180",
+        "current": "0:100:0",
+        "min": "0:100:0",
+        "max": "500:100:500",
+        "step": "1:0:1"
+      },
+      "ExposureBiasCompensation": {
+        "factory_default_value": 0,
+        "current": -2000,
+        "values": [-2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
+      },
+      "ZenithMode": {
+        "factory_default_value": 0,
+        "current": 3,
+        "values": [0, 1, 2, 3]
+      },
+      "VideoOutput": {
+        "factory_default_value": 0,
+        "current": 1,
+        "values": [0, 1]
+      },
+      "WDR": {
+        "factory_default_value": 0,
+        "current": 3,
+        "values": [0, 1, 2, 3]
+      },
+      "StitchMode": {
+        "factory_default_value": 0,
+        "current": 1,
+        "values": [0, 1]
+      },
+      "VideoBitrate": {
+        "factory_default_value": 16,
+        "current": 8,
+        "values": [8, 16]
+      },
+      "AudioOutput": {
+        "factory_default_value": 1,
+        "current": 0,
+        "values": [0, 1]
+      },
+      "AudioInputGain": {
+        "factory_default_value": 18,
+        "current": 0,
+        "min": 0,
+        "max": 29,
+        "step": 1
+      },
+      "StandbyLedBrightness": {
+        "factory_default_value": 255,
+        "current": 0,
+        "min": 0,
+        "max": 255,
+        "step": 1
+      },
+      "TransmittingLedBrightness": {
+        "factory_default_value": 255,
+        "current": 0,
+        "min": 0,
+        "max": 255,
+        "step": 1
+      }
+    }
+  }
+}

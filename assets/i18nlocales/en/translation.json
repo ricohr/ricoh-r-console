@@ -1,0 +1,137 @@
+{
+  "label": {
+    "DeviceList": "Device",
+    "DeviceInfo": "Device information",
+    "WhiteBalance": "White balance",
+    "RGBGain": "White Balance (RGB Gain)",
+    "ExposureBiasCompensation": "Exposure",
+    "StillCaptureMode": "Shooting mode",
+    "ZenithMode": "Top/Bottom Correction",
+    "VideoOutput": "Video Output",
+    "AudioOutput": "HDMI Audio Output",
+    "RGBGain-red": "R",
+    "RGBGain-green": "G",
+    "RGBGain-blue": "B",
+    "RGBGain-all": "Batch",
+    "StandbyLedBrightness": "Standby LED Brightness",
+    "TransmittingLedBrightness": "Transferring LED Brightness",
+    "WDR": "WDR",
+    "StitchMode": "Switch Adjustment",
+    "AudioInputGain": "Audio Input Gain",
+    "VideoBitrate": "Recording Bit Rate",
+    "retryDetect": "Readjustment",
+    "presetList": "Presets",
+    "presetList-load": "Load Presets",
+    "presetList-save": "Save Presets",
+    "presetList-caption-target": "No.",
+    "presetList-caption-date": "Update Date",
+    "fileMenu": "File",
+    "fileFirmwareUpdate": "Firmware Update",
+    "fileSaveAs": "Save to file",
+    "fileLoadFrom": "Load from file",
+    "configStore": "Write as device startup settings",
+    "configRemove": "Reset device startup settings",
+    "versionInfo": "Version information",
+    "about": "About RICOH R Console",
+    "retry": "Redo",
+    "continue": "Continue",
+    "close": "Close",
+    "cancel": "Cancel",
+    "save": "Save",
+    "initializeProps": "Restore defaults"
+  },
+  "DeviceList": {
+    "No Devices": "Device not connected",
+    "selectDevice": "Select"
+  },
+  "firmwareUpdate": {
+    "downloadFirmware": "Download the latest firmware from the website below",
+    "invalidFileName": "Incorrect file name",
+    "invalidFileContent": "Incorrect file",
+    "uploading": "Transferring.",
+    "afterUpload": "<p class='emphasis'>Do not disconnect the power cable until the procedure below has completed.</p><ol><li>Disconnect the HDMI cable if it is connected to your RICOH R.</li><li>Press the power button on your RICOH R to turn the power off.</li><li>Press the power button on your RICOH R to turn the power on.</li><li>The LED will flash white for about 20 seconds.</li><li>The firmware update is complete once the LED returns to a solid light.</li></ol>"
+  },
+  "initializeProps": {
+    "confirm": "Restore default settings"
+  },
+  "deviceInfo": {
+    "DeviceVersion": "Firmware Version",
+    "SerialNumber": "Serial Number",
+    "Manufacturer": "Manufacturer",
+    "Model": "Model"
+  },
+  "notify": {
+    "propertyFetchFailed": "Failed to fetching settings",
+    "propertyUpdated": "Updated settings",
+    "propertyUpdateFailed": "Failed to update settings",
+    "deviceAdded": "Device connected",
+    "deviceRemoved": "Device disconnected",
+    "presetsLooaded": "Setup from presets",
+    "presetsLoadFailed": "Failed to load presets",
+    "presetsSaved": "Saved presets",
+    "presetsSaveFailed": "Failed to save presets",
+    "fileLooaded": "Setup from file",
+    "fileLoadFailed": "Failed to load file",
+    "fileSaved": "Saved to file",
+    "fileSaveFailed": "Failed to save file",
+    "propsInitialized": "Settings were reset",
+    "configObjectLoaded": "Loaded the device startup settings",
+    "configObjectLoadFailed": "Failed to load the device startup settings",
+    "configObjectStored": "Wrote the device startup settings",
+    "configObjectStoreFailed": "Failed to write the device startup settings",
+    "configObjectRemoved": "Device startup settings were reset",
+    "configObjectRemoveFailed": "Failed to reset device startup settings",
+    "internalError": "Failed to process internally",
+    "FAILED(2019)": "Device is operating",
+    "failedWhileRecording": "Cannot operate during recording"
+  },
+  "WhiteBalance": {
+    "1": "Manual",
+    "2": "Auto white balance"
+  },
+  "StillCaptureMode": {
+    "32770": "Video",
+    "32773": "HDMI live streaming",
+    "32774": "UVC live streaming"
+  },
+  "ZenithMode": {
+    "0": "Do not correct",
+    "1": "Upwards",
+    "2": "Downwards",
+    "3": "Auto"
+  },
+  "VideoOutput": {
+    "0": "Full HD",
+    "1": "Actual size"
+  },
+  "AudioOutput": {
+    "0": "Do not output",
+    "1": "Output"
+  },
+  "WDR": {
+    "0": "Disable",
+    "1": "Low",
+    "2": "Medium",
+    "3": "High"
+  },
+  "StitchMode": {
+    "0": "Fixed value",
+    "1": "Auto adjustment"
+  },
+  "VideoBitrate": {
+    "8": "8Mbps",
+    "16": "16Mbps"
+  },
+  "presets": {
+    "preset 0": "Preset 0",
+    "preset 1": "Preset 1",
+    "preset 2": "Preset 2",
+    "preset 3": "Preset 3",
+    "preset 4": "Preset 4",
+    "preset 5": "Preset 5",
+    "preset 6": "Preset 6",
+    "preset 7": "Preset 7",
+    "preset 8": "Preset 8",
+    "preset 9": "Preset 9"
+  }
+}

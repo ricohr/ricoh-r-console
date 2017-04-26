@@ -1,0 +1,90 @@
+{
+  "name": "RICOH_R_Console",
+  "version": "1.0.0",
+  "description": "RICOH R Console",
+  "repository": "https://github.com/ricohr/ricoh-r-console.git",
+  "main": "main.js",
+  "scripts": {
+    "app": "electron .",
+    "compile": "gulp compile",
+    "watch": "gulp watch",
+    "test": "gulp test",
+    "test-app": "gulp test-app",
+    "build": "gulp build",
+    "package": "gulp package",
+    "update-helper": "gulp update-helper"
+  },
+  "keywords": [
+    "RICOH",
+    "RICOH R",
+    "RICOH R Console",
+    "MTP"
+  ],
+  "author": "Ricoh Company, Ltd.",
+  "license": "MIT",
+  "build": {
+    "appId": "com.jrits.ricoh_r_console",
+    "files": [
+      "**/*",
+      "!.gitignore",
+      "!gulpfile.js",
+      "!assets/scripts/*.map",
+      "!build",
+      "!dist",
+      "!src",
+      "!test",
+      "!test-tmp"
+    ],
+    "extraResources": [
+      "lib/mtphelper/*"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-notify": "^3.1.3",
+    "bootstrap-select": "^1.12.1",
+    "bootstrap-slider": "^9.2.2",
+    "commander": "^2.9.0",
+    "flux": "^3.1.2",
+    "i18next": "^7.1.1",
+    "i18next-node-fs-backend": "^0.1.2",
+    "immutable": "^3.8.1",
+    "ionicons": "^2.0.0",
+    "jquery": "^3.1.1",
+    "jquery-i18next": "^1.1.0",
+    "queue": "^4.0.0",
+    "react": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
+    "react-bootstrap-slider": "^1.1.5",
+    "react-bs-notifier": "^4.3.0",
+    "react-dom": "^15.4.2",
+    "sleep-promise": "^2.0.0",
+    "xss-filters": "^1.2.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "del": "^2.2.2",
+    "electron": "^1.6.2",
+    "electron-builder": "^15.1.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-mocha": "^4.1.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-shell": "^0.6.3",
+    "gulp-sourcemaps": "^2.4.1",
+    "minimist": "^1.2.0",
+    "request": "^2.80.0",
+    "run-sequence": "^1.2.2",
+    "spectron": "^3.4.0"
+  }
+}

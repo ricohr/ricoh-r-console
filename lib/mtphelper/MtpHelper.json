@@ -1,0 +1,23 @@
+{
+  "friendlyNames":["RICOH R Development Kit"],
+  "properties":{
+    "WhiteBalance":["0x5005","UINT16"],
+    "RGBGain":["0x5006","STR"],
+    "ExposureBiasCompensation":["0x5010","INT16"],
+    "StillCaptureMode":["0x5013","UINT16"],
+    "PerceivedDeviceType":["0xD407","UINT32"],
+    "CaptureStatus":["0xD808","UINT8"],
+    "RecordingTime":["0xD809","UINT16"],
+    "RemainingRecordingTime":["0xD80A","UINT16"],
+    "RemainingVideos":["0xD80D","UINT16"],
+    "ZenithMode":["0xD812","UINT8"],
+    "VideoOutput":["0xD813","UINT8"],
+    "AudioOutput":["0xD814","UINT8"],
+    "StandbyLedBrightness":["0xD815","UINT8"],
+    "TransmittingLedBrightness":["0xD816","UINT8"],
+    "WDR":["0xD817","UINT8"],
+    "StitchMode":["0xD818","UINT8"],
+    "AudioInputGain":["0xD819","UINT8"],
+    "VideoBitrate":["0xD81A","UINT8"]
+  }
+}

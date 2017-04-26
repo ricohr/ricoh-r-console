@@ -1,0 +1,137 @@
+{
+  "label": {
+    "DeviceList": "デバイス",
+    "DeviceInfo": "デバイス情報",
+    "WhiteBalance": "ホワイトバランス",
+    "RGBGain": "ホワイトバランス(RGBゲイン)",
+    "ExposureBiasCompensation": "露出",
+    "StillCaptureMode": "撮影モード",
+    "ZenithMode": "天頂補正",
+    "VideoOutput": "映像出力",
+    "AudioOutput": "HDMI音声出力",
+    "RGBGain-red": "R",
+    "RGBGain-green": "G",
+    "RGBGain-blue": "B",
+    "RGBGain-all": "一括",
+    "StandbyLedBrightness": "待機中LED輝度",
+    "TransmittingLedBrightness": "転送中LED輝度",
+    "WDR": "WDR",
+    "StitchMode": "スティッチ調整",
+    "AudioInputGain": "音声入力ゲイン",
+    "VideoBitrate": "録画ビットレート",
+    "retryDetect": "再調整",
+    "presetList": "プリセット",
+    "presetList-load": "プリセット読込",
+    "presetList-save": "プリセット保存",
+    "presetList-caption-target": "No.",
+    "presetList-caption-date": "更新日時",
+    "fileMenu": "ファイル",
+    "fileFirmwareUpdate": "ファームウエアアップデート",
+    "fileSaveAs": "ファイルへ保存",
+    "fileLoadFrom": "ファイルから読込",
+    "configStore": "デバイス起動時の設定として書き込む",
+    "configRemove": "デバイス起動時の設定を初期化する",
+    "versionInfo": "バージョン情報",
+    "about": "RICOH R Console について",
+    "retry": "やり直す",
+    "continue": "続ける",
+    "close": "閉じる",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "initializeProps": "初期状態に戻す"
+  },
+  "DeviceList": {
+    "No Devices": "デバイスが接続されていません",
+    "selectDevice": "選択してください"
+  },
+  "firmwareUpdate": {
+    "downloadFirmware": "以下のサイトから最新のファームウエアをダウンロードしてください",
+    "invalidFileName": "ファイル名が正しくありません",
+    "invalidFileContent": "ファイルが正しくありません",
+    "uploading": "転送中です。",
+    "afterUpload": "<p class='emphasis'>以下の手順が完了するまで電源ケーブルを抜かないでください。</p><ol><li>HDMIケーブルを挿している場合はHDMIケーブルを抜きます。</li><li>電源ボタンを押して電源をOFFします。</li><li>電源ボタンを押して電源をONします。</li><li>約20秒間LEDが白色で点滅します。</li><li>LEDが点灯に戻ればファームアップデート完了です。</li></ol>"
+  },
+  "initializeProps": {
+    "confirm": "設定を初期状態に戻します"
+  },
+  "deviceInfo": {
+    "DeviceVersion": "ファームウエアバージョン",
+    "SerialNumber": "シリアルナンバー",
+    "Manufacturer": "メーカー",
+    "Model": "モデル"
+  },
+  "notify": {
+    "propertyFetchFailed": "設定取得に失敗しました",
+    "propertyUpdated": "設定を更新しました",
+    "propertyUpdateFailed": "設定更新に失敗しました",
+    "deviceAdded": "デバイスが接続されました",
+    "deviceRemoved": "デバイスが切断されました",
+    "presetsLooaded": "プリセットから設定しました",
+    "presetsLoadFailed": "プリセットのロードに失敗しました",
+    "presetsSaved": "プリセットを保存しました",
+    "presetsSaveFailed": "プリセットの保存に失敗しました",
+    "fileLooaded": "ファイルから設定しました",
+    "fileLoadFailed": "ファイルのロードに失敗しました",
+    "fileSaved": "ファイルへ保存しました",
+    "fileSaveFailed": "ファイルの保存に失敗しました",
+    "propsInitialized": "設定を初期化しました",
+    "configObjectLoaded": "デバイス起動時の設定を読み込みました",
+    "configObjectLoadFailed": "デバイス起動時の設定の読み込みに失敗しました",
+    "configObjectStored": "デバイス起動時の設定を書き込みました",
+    "configObjectStoreFailed": "デバイス起動時の設定の書き込みに失敗しました",
+    "configObjectRemoved": "デバイス起動時の設定を初期化しました",
+    "configObjectRemoveFailed": "デバイス起動時の設定の初期化に失敗しました",
+    "internalError": "内部処理に失敗しました",
+    "FAILED(2019)": "デバイスが動作中です",
+    "failedWhileRecording": "録画中は操作できません"
+  },
+  "WhiteBalance": {
+    "1": "マニュアル",
+    "2": "オートホワイトバランス"
+  },
+  "StillCaptureMode": {
+    "32770": "動画",
+    "32773": "HDMIライブストリーミング",
+    "32774": "UVCライブストリーミング"
+  },
+  "ZenithMode": {
+    "0": "補正しない",
+    "1": "上向きで補正",
+    "2": "下向きで補正",
+    "3": "自動判定で補正"
+  },
+  "VideoOutput": {
+    "0": "FullHD",
+    "1": "アクチュアルサイズ"
+  },
+  "AudioOutput": {
+    "0": "出力しない",
+    "1": "出力する"
+  },
+  "WDR": {
+    "0": "無効",
+    "1": "弱",
+    "2": "中",
+    "3": "強"
+  },
+  "StitchMode": {
+    "0": "固定値",
+    "1": "自動調整"
+  },
+  "VideoBitrate": {
+    "8": "8Mbps",
+    "16": "16Mbps"
+  },
+  "presets": {
+    "preset 0": "プリセット 0",
+    "preset 1": "プリセット 1",
+    "preset 2": "プリセット 2",
+    "preset 3": "プリセット 3",
+    "preset 4": "プリセット 4",
+    "preset 5": "プリセット 5",
+    "preset 6": "プリセット 6",
+    "preset 7": "プリセット 7",
+    "preset 8": "プリセット 8",
+    "preset 9": "プリセット 9"
+  }
+}
