@@ -161,6 +161,8 @@ $bodyTextColor  : $colGray3;
 $btnDefaultColor : $colGray3;
 $btnBoaderColor : $colGray2;
 $btnPrimaryColor : $colGray1;
+$tooltipBgColor  : $colGray3;
+$tooltipTextColor  : $colBlack1;
 
 //　tags
 body {
@@ -259,6 +261,13 @@ hr {
 }
 .slider-handle {
   background: $bgDefault;
+}
+.tooltip-inner {
+    color: $tooltipTextColor;
+    background-color: $tooltipBgColor;
+}
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: $tooltipBgColor;
 }
 
 
