@@ -29,8 +29,11 @@ export default class RGBGain extends React.Component {
       this._value = undefined;
       return (<div/>);
     }
-    const data = this.props.propDesc.toObject(),
-          vars = ['current', 'step', 'min', 'max'].reduce((hash,key)=>{
+    const data = this.props.propDesc.toObject();
+    if (!data.max) {
+      return (<div/>);
+    }
+    const vars = ['current', 'step', 'min', 'max'].reduce((hash,key)=>{
             hash[key] = data[key].split(':').map((v)=>parseInt(v));
             return hash;
           }, {}),

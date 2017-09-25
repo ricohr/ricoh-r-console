@@ -24,8 +24,12 @@ export default class RadioButtons extends React.Component {
       this._value = undefined;
       return (<div/>);
     }
-    const data = this.props.propDesc.toObject(),
-          name = this.props.propName,
+    const data = this.props.propDesc.toObject();
+    if (!data.values) {
+      this._value = undefined;
+      return (<div/>);
+    }
+    const name = this.props.propName,
           radioButtons = data.values.map((value)=>{
             let checked, active;
             if (value === data.current) {

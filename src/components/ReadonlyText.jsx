@@ -18,6 +18,9 @@ export default class ReadonlyText extends React.Component {
       return (<div/>);
     }
     const current = this.props.propDesc.get('current');
+    if (!current) {
+      return (<div/>);
+    }
     return (
       <PropBase {...(this.props)}>
         <I18N.Div className='col-sm-8' data-i18n={`StillCaptureMode.${current}`}/>
