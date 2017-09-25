@@ -26,8 +26,11 @@ export default class MinMaxSlider extends React.Component {
     if (!this.props.propDesc) {
       return (<div/>);
     }
-    const data = this.props.propDesc.toObject(),
-          options = {
+    const data = this.props.propDesc.toObject();
+    if (!data.step) {
+      return (<div/>);
+    }
+    const options = {
             step: data.step,
             min: data.min,
             max: data.max,

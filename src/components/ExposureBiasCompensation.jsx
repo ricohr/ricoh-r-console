@@ -26,8 +26,11 @@ export default class ExposureBiasCompensation extends React.Component {
     if (!this.props.propDesc) {
       return (<div/>);
     }
-    const data = this.props.propDesc.toObject(),
-          data_values = data.values.toArray();
+    const data = this.props.propDesc.toObject();
+    if (!data.values) {
+      return (<div/>);
+    }
+    const data_values = data.values.toArray();
     function reverseIndex(index) {
       return data_values.length - 1 - index;
     }
