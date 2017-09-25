@@ -202,6 +202,16 @@ describe('Contents when the device is connected.', ()=>{
         });
       });
 
+      describe('FlickerReduction', ()=>{
+        it('label is visible.', ()=>{
+          return expect(app.client.isVisible('label[for="FlickerReduction-group"]')).eventually.to.equal(true);
+        });
+
+        it('2-radios are visible.', ()=>{
+          return expect(app.client.isVisible('label[for="FlickerReduction-group"]+div input[type="radio"]+span')).eventually.to.eql([true, true]);
+        });
+      });
+
       describe('ZenithMode', ()=>{
         it('label is visible.', ()=>{
           return expect(app.client.isVisible('label[for="ZenithMode-group"]')).eventually.to.equal(true);
@@ -312,6 +322,7 @@ describe('Contents when the device is connected.', ()=>{
         return app.client.getAttribute('#settingItems >*', 'class').then((classes)=>{
           return expect(classes).to.eql([
             'group-icon icon-image',
+            'row form-group',
             'row form-group',
             'row form-group',
             'row form-group',

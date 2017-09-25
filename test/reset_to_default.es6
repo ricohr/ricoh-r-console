@@ -68,6 +68,15 @@ describe('Reset to default.', ()=>{
       });
     });
 
+    describe('FlickerReduction', ()=>{
+      it('becomes to default value.', ()=>{
+        Helper.expect_mtpprop_value_is_default(currentProps, 'FlickerReduction');
+      });
+      it('becomes to default state', ()=>{
+        return Helper.expect_button_states('FlickerReduction', [true, false]);
+      });
+    });
+
     describe('ZenithMode', ()=>{
       it('becomes to default value.', ()=>{
         Helper.expect_mtpprop_value_is_default(currentProps, 'ZenithMode');

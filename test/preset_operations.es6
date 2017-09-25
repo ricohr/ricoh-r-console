@@ -85,6 +85,7 @@ describe('Preset operations.', ()=>{
           'WhiteBalance',
           'RGBGain',
           'ExposureBiasCompensation',
+          'FlickerReduction',
           'ZenithMode',
           'VideoOutput',
           'WDR',
