@@ -14,6 +14,7 @@ const _PropNames = [
   'WhiteBalance',
   'RGBGain',
   'ExposureBiasCompensation',
+  'FlickerReduction',
   'ZenithMode',
   'VideoOutput',
   'WDR',

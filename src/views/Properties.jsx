@@ -89,6 +89,7 @@ export default class Properties extends React.Component {
         <RadioButtons propName='WhiteBalance' propDesc={propValues.WhiteBalance} onChange={this.onPropChanged.bind(this)}/>
         <RGBGain propName='RGBGain' propDesc={propValues.RGBGain} mute={muteRGBGain || mute} onChange={this.onPropChanged.bind(this)}/>
         <ExposureBiasCompensation propName='ExposureBiasCompensation' propDesc={propValues.ExposureBiasCompensation} mute={mute} onChange={this.onPropChanged.bind(this)}/>
+        <RadioButtons propName='FlickerReduction' propDesc={propValues.FlickerReduction} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='ZenithMode' propDesc={propValues.ZenithMode} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='VideoOutput' propDesc={propValues.VideoOutput} {..._VideoOutputImages} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='WDR' propDesc={propValues.WDR} onChange={this.onPropChanged.bind(this)}/>
