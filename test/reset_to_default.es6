@@ -82,7 +82,7 @@ describe('Reset to default.', ()=>{
         Helper.expect_mtpprop_value_is_default(currentProps, 'ZenithMode');
       });
       it('becomes to default state', ()=>{
-        return Helper.expect_button_states('ZenithMode', [true, false, false, false]);
+        return Helper.expect_button_states('ZenithMode', [false, true, false, false, false]);
       });
     });
 
