@@ -6,6 +6,7 @@
     "RGBGain": "White Balance (RGB Gain)",
     "ExposureBiasCompensation": "Exposure",
     "StillCaptureMode": "Shooting mode",
+    "FlickerReduction": "Reduce Flourescent Flicker",
     "ZenithMode": "Top/Bottom Correction",
     "VideoOutput": "Video Output",
     "AudioOutput": "HDMI Audio Output",
@@ -93,6 +94,10 @@
     "32770": "Video",
     "32773": "HDMI live streaming",
     "32774": "UVC live streaming"
+  },
+  "FlickerReduction": {
+    "0": "Disable",
+    "1": "Enable"
   },
   "ZenithMode": {
     "0": "Do not correct",

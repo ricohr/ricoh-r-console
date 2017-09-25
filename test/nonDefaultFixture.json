@@ -2,6 +2,7 @@
   "WhiteBalance": 1,
   "RGBGain": "0:100:0",
   "ExposureBiasCompensation": 2000,
+  "FlickerReduction": 1,
   "ZenithMode": 3,
   "VideoOutput": 1,
   "WDR": 3,

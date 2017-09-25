@@ -257,6 +257,7 @@ const PropNames = [
   "WhiteBalance",
   "RGBGain",
   "ExposureBiasCompensation",
+  "FlickerReduction",
   "ZenithMode",
   "VideoOutput",
   "WDR",

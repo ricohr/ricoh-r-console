@@ -60,6 +60,15 @@ describe('Edit parameters.', ()=>{
     });
   });
 
+  describe('FlickerReduction', ()=>{
+    it('When you click Disable, MTP.FlickerReduction becomes 0.', ()=>{
+      return Helper.expect_current_value_when_button_is_clicked('FlickerReduction', 1, 0);
+    })
+    it('When you click Enable, MTP.FlickerReduction becomes 1.', ()=>{
+      return Helper.expect_current_value_when_button_is_clicked('FlickerReduction', 2, 1);
+    })
+  });
+
   describe('ZenithMode', ()=>{
     it('When you click OFF, MTP.ZenithMode becomes 0.', ()=>{
       return Helper.expect_current_value_when_button_is_clicked('ZenithMode', 1, 0);

@@ -6,6 +6,7 @@
     "RGBGain": "ホワイトバランス(RGBゲイン)",
     "ExposureBiasCompensation": "露出",
     "StillCaptureMode": "撮影モード",
+    "FlickerReduction": "蛍光灯ちらつき低減",
     "ZenithMode": "天頂補正",
     "VideoOutput": "映像出力",
     "AudioOutput": "HDMI音声出力",
@@ -93,6 +94,10 @@
     "32770": "動画",
     "32773": "HDMIライブストリーミング",
     "32774": "UVCライブストリーミング"
+  },
+  "FlickerReduction": {
+    "0": "無効",
+    "1": "有効"
   },
   "ZenithMode": {
     "0": "補正しない",
