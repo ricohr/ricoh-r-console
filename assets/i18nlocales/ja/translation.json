@@ -21,6 +21,7 @@
     "AudioInputGain": "音声入力ゲイン",
     "VideoBitrate": "録画ビットレート",
     "retryDetect": "再調整",
+    "retryZenithLock": "再固定",
     "presetList": "プリセット",
     "presetList-load": "プリセット読込",
     "presetList-save": "プリセット保存",
@@ -103,7 +104,8 @@
     "0": "補正しない",
     "1": "上向きで補正",
     "2": "下向きで補正",
-    "3": "自動判定で補正"
+    "3": "自動判定で補正",
+    "4": "固定"
   },
   "VideoOutput": {
     "0": "FullHD",
