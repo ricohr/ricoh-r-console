@@ -76,10 +76,12 @@ export default class Properties extends React.Component {
     }
     const WhiteBalance_Auto = 2,
           StitchMode_Auto = 1,
+          ZenithMode_Lock = 4,
           muteRGBGain = (getDesc(propValues, 'WhiteBalance').current === WhiteBalance_Auto),
           enableStitchModeButton = (getDesc(propValues, 'StitchMode').current === StitchMode_Auto),
+          enableZenithModeButton = (getDesc(propValues, 'ZenithMode').current === ZenithMode_Lock),
           mute = this.props.appStore.get('mute');
-    console.debug('Properties', {muteRGBGain, enableStitchModeButton, mute});
+    console.debug('Properties', {muteRGBGain, enableStitchModeButton, enableZenithModeButton, mute});
     return (
       <div id='settingItems' className='settings-body'>
         <Icon show={showItems} icon='icon-image'/>
@@ -90,7 +92,9 @@ export default class Properties extends React.Component {
         <RGBGain propName='RGBGain' propDesc={propValues.RGBGain} mute={muteRGBGain || mute} onChange={this.onPropChanged.bind(this)}/>
         <ExposureBiasCompensation propName='ExposureBiasCompensation' propDesc={propValues.ExposureBiasCompensation} mute={mute} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='FlickerReduction' propDesc={propValues.FlickerReduction} onChange={this.onPropChanged.bind(this)}/>
-        <RadioButtons propName='ZenithMode' propDesc={propValues.ZenithMode} onChange={this.onPropChanged.bind(this)}/>
+        <RadioButtons propName='ZenithMode' propDesc={propValues.ZenithMode} onChange={this.onPropChanged.bind(this)}>
+          <I18N.Button bsStyle='default' data-i18n='label.retryZenithLock' disabled={!enableZenithModeButton} onClick={()=>this.onPropChanged(ZenithMode_Lock, 'ZenithMode')}/>
+        </RadioButtons>
         <RadioButtons propName='VideoOutput' propDesc={propValues.VideoOutput} {..._VideoOutputImages} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='WDR' propDesc={propValues.WDR} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='StitchMode' propDesc={propValues.StitchMode} onChange={this.onPropChanged.bind(this)}>

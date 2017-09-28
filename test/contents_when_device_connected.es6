@@ -217,8 +217,12 @@ describe('Contents when the device is connected.', ()=>{
           return expect(app.client.isVisible('label[for="ZenithMode-group"]')).eventually.to.equal(true);
         });
 
-        it('4-radios are visible.', ()=>{
-          return expect(app.client.isVisible('label[for="ZenithMode-group"]+div input[type="radio"]+span')).eventually.to.eql([true, true, true, true]);
+        it('5-radios are visible.', ()=>{
+          return expect(app.client.isVisible('label[for="ZenithMode-group"]+div input[type="radio"]+span')).eventually.to.eql([true, true, true, true, true]);
+        });
+
+        it('retry-lock button is visible.', ()=>{
+          return expect(app.client.isVisible('label[for="ZenithMode-group"]+div button')).eventually.to.equal(true);
         });
       });
 

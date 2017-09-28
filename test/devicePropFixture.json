@@ -35,8 +35,8 @@
         "values": [0, 1]
       },
       "ZenithMode": {
-        "factory_default_value": 0,
-        "values": [0, 1, 2, 3]
+        "factory_default_value": 1,
+        "values": [0, 1, 2, 3, 4]
       },
       "VideoOutput": {
         "factory_default_value": 0,
@@ -119,9 +119,9 @@
         "values": [0, 1]
       },
       "ZenithMode": {
-        "factory_default_value": 0,
-        "current": 3,
-        "values": [0, 1, 2, 3]
+        "factory_default_value": 1,
+        "current": 4,
+        "values": [0, 1, 2, 3, 4]
       },
       "VideoOutput": {
         "factory_default_value": 0,

@@ -21,6 +21,7 @@
     "AudioInputGain": "Audio Input Gain",
     "VideoBitrate": "Recording Bit Rate",
     "retryDetect": "Readjustment",
+    "retryZenithLock": "Retry lock",
     "presetList": "Presets",
     "presetList-load": "Load Presets",
     "presetList-save": "Save Presets",
@@ -103,7 +104,8 @@
     "0": "Do not correct",
     "1": "Upwards",
     "2": "Downwards",
-    "3": "Auto"
+    "3": "Auto",
+    "4": "Lock"
   },
   "VideoOutput": {
     "0": "Full HD",
