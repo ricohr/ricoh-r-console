@@ -126,7 +126,9 @@ describe('Preset operations.', ()=>{
         });
 
         after(()=>{
-          return Actions.Preset.Load.click().then(()=>{
+          return Actions.Preset.Load.click().catch(()=>{
+            return theApp.client.click('.dropdown-backdrop');
+          }).then(()=>{
             return Helper.wait_close_all();
           });
         });
@@ -159,7 +161,9 @@ describe('Preset operations.', ()=>{
       });
 
       it('When you click preset-list button, preset list is disappeared.', ()=>{
-        return Actions.Preset.Load.click().then(()=>{
+        return Actions.Preset.Load.click().catch(()=>{
+          return theApp.client.click('.dropdown-backdrop');
+        }).then(()=>{
           return Helper.wait_for_unvisible('#presetList>div .dropdown-menu');
         });
       });

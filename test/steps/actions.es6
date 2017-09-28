@@ -57,7 +57,7 @@ module.exports = {
         if (!item_index) {
           item_index = 1;
         }
-        return app.client.click('button[data-id="deviceList"]+.dropdown-menu a[tabindex="' + (parseInt(item_index)-1) + '"]');
+        return app.client.click('label[data-i18n="label.DeviceList"]+div .dropdown-menu.open a[tabindex="' + (parseInt(item_index)-1) + '"]')
       },
     },
   },
