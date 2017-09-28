@@ -80,17 +80,17 @@ export default class Properties extends React.Component {
           muteRGBGain = (getDesc(propValues, 'WhiteBalance').current === WhiteBalance_Auto),
           enableStitchModeButton = (getDesc(propValues, 'StitchMode').current === StitchMode_Auto),
           enableZenithModeButton = (getDesc(propValues, 'ZenithMode').current === ZenithMode_Lock),
-          mute = this.props.appStore.get('mute');
-    console.debug('Properties', {muteRGBGain, enableStitchModeButton, enableZenithModeButton, mute});
+          backdrop = this.props.appStore.get('mute')? (<div className='settings-backdrop'/>): ''
     return (
       <div id='settingItems' className='settings-body'>
+        {backdrop}
         <Icon show={showItems} icon='icon-image'/>
         <ReadonlyText propName='StillCaptureMode' propDesc={propValues.StillCaptureMode}>
           <I18N.Button bsStyle='primary' className='btn-right-alignment' data-i18n='label.initializeProps' onClick={this.onResetToDefault.bind(this)}/>
         </ReadonlyText>
         <RadioButtons propName='WhiteBalance' propDesc={propValues.WhiteBalance} onChange={this.onPropChanged.bind(this)}/>
-        <RGBGain propName='RGBGain' propDesc={propValues.RGBGain} mute={muteRGBGain || mute} onChange={this.onPropChanged.bind(this)}/>
-        <ExposureBiasCompensation propName='ExposureBiasCompensation' propDesc={propValues.ExposureBiasCompensation} mute={mute} onChange={this.onPropChanged.bind(this)}/>
+        <RGBGain propName='RGBGain' propDesc={propValues.RGBGain} mute={muteRGBGain} onChange={this.onPropChanged.bind(this)}/>
+        <ExposureBiasCompensation propName='ExposureBiasCompensation' propDesc={propValues.ExposureBiasCompensation} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='FlickerReduction' propDesc={propValues.FlickerReduction} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='ZenithMode' propDesc={propValues.ZenithMode} onChange={this.onPropChanged.bind(this)}>
           <I18N.Button bsStyle='default' data-i18n='label.retryZenithLock' disabled={!enableZenithModeButton} onClick={()=>this.onPropChanged(ZenithMode_Lock, 'ZenithMode')}/>
@@ -104,11 +104,11 @@ export default class Properties extends React.Component {
         <HR show={showItems}/>
         <Icon show={showItems} icon='icon-volume'/>
         <RadioButtons propName='AudioOutput' propDesc={propValues.AudioOutput} onChange={this.onPropChanged.bind(this)}/>
-        <MinMaxSlider propName='AudioInputGain' propDesc={propValues.AudioInputGain} mute={mute} onChange={this.onPropChanged.bind(this)}/>
+        <MinMaxSlider propName='AudioInputGain' propDesc={propValues.AudioInputGain} onChange={this.onPropChanged.bind(this)}/>
         <HR show={showItems}/>
         <Icon show={showItems} icon='icon-led'/>
-        <MinMaxSlider propName='StandbyLedBrightness' propDesc={propValues.StandbyLedBrightness} mute={mute} onChange={this.onPropChanged.bind(this)}/>
-        <MinMaxSlider propName='TransmittingLedBrightness' propDesc={propValues.TransmittingLedBrightness} mute={mute} onChange={this.onPropChanged.bind(this)}/>
+        <MinMaxSlider propName='StandbyLedBrightness' propDesc={propValues.StandbyLedBrightness} onChange={this.onPropChanged.bind(this)}/>
+        <MinMaxSlider propName='TransmittingLedBrightness' propDesc={propValues.TransmittingLedBrightness} onChange={this.onPropChanged.bind(this)}/>
         <ResetToDefault ref='resetToDefaultModal' {...this.props}/>
       </div>
     );
