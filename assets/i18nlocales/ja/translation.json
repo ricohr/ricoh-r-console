@@ -4,6 +4,7 @@
     "DeviceInfo": "デバイス情報",
     "WhiteBalance": "ホワイトバランス",
     "RGBGain": "ホワイトバランス(RGBゲイン)",
+    "ColorTemperature": "色温度",
     "ExposureBiasCompensation": "露出",
     "StillCaptureMode": "撮影モード",
     "FlickerReduction": "蛍光灯ちらつき低減",
@@ -89,7 +90,8 @@
   },
   "WhiteBalance": {
     "1": "マニュアル",
-    "2": "オートホワイトバランス"
+    "2": "オートホワイトバランス",
+    "32775": "色温度"
   },
   "StillCaptureMode": {
     "32770": "動画",

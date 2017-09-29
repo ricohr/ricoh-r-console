@@ -13,6 +13,7 @@ const _PropNames = [
   'StillCaptureMode',
   'WhiteBalance',
   'RGBGain',
+  'ColorTemperature',
   'ExposureBiasCompensation',
   'FlickerReduction',
   'ZenithMode',

@@ -4,6 +4,7 @@
     "DeviceInfo": "Device information",
     "WhiteBalance": "White balance",
     "RGBGain": "White Balance (RGB Gain)",
+    "ColorTemperature": "Color temperature",
     "ExposureBiasCompensation": "Exposure",
     "StillCaptureMode": "Shooting mode",
     "FlickerReduction": "Reduce Flourescent Flicker",
@@ -89,7 +90,8 @@
   },
   "WhiteBalance": {
     "1": "Manual",
-    "2": "Auto white balance"
+    "2": "Auto white balance",
+    "32775": "Color temperature"
   },
   "StillCaptureMode": {
     "32770": "Video",

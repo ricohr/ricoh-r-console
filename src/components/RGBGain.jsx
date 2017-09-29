@@ -29,6 +29,9 @@ export default class RGBGain extends React.Component {
       this._value = undefined;
       return (<div/>);
     }
+    if (this.props.hideItem) {
+      return (<div/>);      
+    }
     const data = this.props.propDesc.toObject();
     if (!data.max) {
       return (<div/>);
