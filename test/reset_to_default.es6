@@ -38,23 +38,26 @@ describe('Reset to default.', ()=>{
         Helper.expect_mtpprop_value_is_default(currentProps, 'WhiteBalance');
       });
       it('becomes to default state', ()=>{
-        return Helper.expect_button_states('WhiteBalance', [false, true]);
+        return Helper.expect_button_states('WhiteBalance', [false, true, false]);
       });
     });
 
     describe('RGBGain', ()=>{
-      it('becomes to default value.', ()=>{
-        Helper.expect_mtpprop_value_is_default(currentProps, 'RGBGain');
-      });
-      it('becomes to default state', ()=>{
-        return Promise.all([
-          Helper.expect_RGBGain_slider_state(currentProps, 'red'),
-          Helper.expect_RGBGain_slider_state(currentProps, 'blue')
-        ]);
-      });
-      it('and becomes disable.', ()=>{
-        return app.client.getAttribute('[data-deviceProperty="RGBGain"] .slider', 'class').then(elms=>{
-          return Promise.all(elms.map(elm=>expect(elm).to.string("slider-disabled")));
+      it('disappears.', ()=>{
+        return app.client.getAttribute('[data-deviceProperty="RGBGain"] .slider', 'class').then(()=>{
+          throw '.RGBGain appears';
+        }).catch((e)=>{
+          return expect(e.type).to.equal("NoSuchElement");
+        });
+      })
+    });
+
+    describe('ColorTemperature', ()=>{
+      it('disappears.', ()=>{
+        return app.client.getAttribute('[data-deviceProperty="ColorTemperature"] .slider', 'class').then(()=>{
+          throw '.ColorTemperature appears';
+        }).catch((e)=>{
+          return expect(e.type).to.equal("NoSuchElement");
         });
       })
     });

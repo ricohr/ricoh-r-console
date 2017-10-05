@@ -1,6 +1,7 @@
 {
   "WhiteBalance": 1,
   "RGBGain": "0:100:0",
+  "ColorTemperature": 10000,
   "ExposureBiasCompensation": 2000,
   "FlickerReduction": 1,
   "ZenithMode": 3,
