@@ -72,8 +72,8 @@ describe('Save and load settings.', ()=>{
     it('ExposureBiasCompensation is reflected.', ()=>{
       return Helper.expect_ui_state('ExposureBiasCompensation', answer, currentProps);
     });
-    it('FlickerReduction is reflected.', ()=>{
-      return Helper.expect_ui_state('FlickerReduction', answer, currentProps);
+    it('FlickerReductionMode is reflected.', ()=>{
+      return Helper.expect_ui_state('FlickerReductionMode', answer, currentProps);
     });
     it('ZenithMode is reflected.', ()=>{
       return Helper.expect_ui_state('ZenithMode', answer, currentProps);

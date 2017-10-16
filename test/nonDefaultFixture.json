@@ -3,7 +3,7 @@
   "RGBGain": "0:100:0",
   "ColorTemperature": 10000,
   "ExposureBiasCompensation": 2000,
-  "FlickerReduction": 1,
+  "FlickerReductionMode": 1,
   "ZenithMode": 3,
   "VideoOutput": 1,
   "WDR": 3,

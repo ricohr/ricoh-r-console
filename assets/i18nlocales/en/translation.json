@@ -7,7 +7,7 @@
     "ColorTemperature": "Color temperature",
     "ExposureBiasCompensation": "Exposure",
     "StillCaptureMode": "Shooting mode",
-    "FlickerReduction": "Reduce Flourescent Flicker",
+    "FlickerReductionMode": "Reduce Flourescent Flicker",
     "ZenithMode": "Top/Bottom Correction",
     "VideoOutput": "Video Output",
     "AudioOutput": "HDMI Audio Output",
@@ -98,7 +98,7 @@
     "32773": "HDMI live streaming",
     "32774": "UVC live streaming"
   },
-  "FlickerReduction": {
+  "FlickerReductionMode": {
     "0": "Disable",
     "1": "Enable"
   },

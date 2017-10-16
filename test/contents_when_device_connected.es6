@@ -170,13 +170,13 @@ describe('Contents when the device is connected.', ()=>{
         });
       });
 
-      describe('FlickerReduction', ()=>{
+      describe('FlickerReductionMode', ()=>{
         it('label is visible.', ()=>{
-          return expect(app.client.isVisible('label[for="FlickerReduction-group"]')).eventually.to.equal(true);
+          return expect(app.client.isVisible('label[for="FlickerReductionMode-group"]')).eventually.to.equal(true);
         });
 
         it('2-radios are visible.', ()=>{
-          return expect(app.client.isVisible('label[for="FlickerReduction-group"]+div input[type="radio"]+span')).eventually.to.eql([true, true]);
+          return expect(app.client.isVisible('label[for="FlickerReductionMode-group"]+div input[type="radio"]+span')).eventually.to.eql([true, true]);
         });
       });
 
