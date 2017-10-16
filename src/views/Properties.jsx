@@ -11,6 +11,7 @@ import RadioButtons from '../components/RadioButtons';
 import MinMaxSlider from '../components/MinMaxSlider';
 import ReadonlyText from '../components/ReadonlyText';
 import RGBGain from '../components/RGBGain';
+import ColorTemperature from '../components/ColorTemperature';
 import ExposureBiasCompensation from '../components/ExposureBiasCompensation';
 import ResetToDefault from './ResetToDefault';
 import MtpActionCreator from '../data/MtpActionCreator';
@@ -74,10 +75,13 @@ export default class Properties extends React.Component {
         (new MtpActionCreator()).loadProperties();
       }
     }
-    const WhiteBalance_Auto = 2,
+    const WhiteBalance_Manual = 1,
+          WhiteBalance_ColorTemperature = 32775,
           StitchMode_Auto = 1,
           ZenithMode_Lock = 4,
-          muteRGBGain = (getDesc(propValues, 'WhiteBalance').current === WhiteBalance_Auto),
+          select_WhiteBalance = getDesc(propValues, 'WhiteBalance').current,
+          hideRGBGain = !(select_WhiteBalance === WhiteBalance_Manual),
+          hideColorTemperature = !(select_WhiteBalance === WhiteBalance_ColorTemperature),
           enableStitchModeButton = (getDesc(propValues, 'StitchMode').current === StitchMode_Auto),
           enableZenithModeButton = (getDesc(propValues, 'ZenithMode').current === ZenithMode_Lock),
           backdrop = this.props.appStore.get('mute')? (<div className='settings-backdrop'/>): ''
@@ -89,7 +93,8 @@ export default class Properties extends React.Component {
           <I18N.Button bsStyle='primary' className='btn-right-alignment' data-i18n='label.initializeProps' onClick={this.onResetToDefault.bind(this)}/>
         </ReadonlyText>
         <RadioButtons propName='WhiteBalance' propDesc={propValues.WhiteBalance} onChange={this.onPropChanged.bind(this)}/>
-        <RGBGain propName='RGBGain' propDesc={propValues.RGBGain} mute={muteRGBGain} onChange={this.onPropChanged.bind(this)}/>
+        <RGBGain propName='RGBGain' propDesc={propValues.RGBGain} hideItem={hideRGBGain} onChange={this.onPropChanged.bind(this)}/>
+        <ColorTemperature propName='ColorTemperature' propDesc={propValues.ColorTemperature} hideItem={hideColorTemperature} subItem={true} onChange={this.onPropChanged.bind(this)}/>
         <ExposureBiasCompensation propName='ExposureBiasCompensation' propDesc={propValues.ExposureBiasCompensation} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='FlickerReduction' propDesc={propValues.FlickerReduction} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='ZenithMode' propDesc={propValues.ZenithMode} onChange={this.onPropChanged.bind(this)}>

@@ -155,40 +155,8 @@ describe('Contents when the device is connected.', ()=>{
           return expect(app.client.isVisible('label[for="WhiteBalance-group"]')).eventually.to.equal(true);
         });
 
-        it('2-radios are visible.', ()=>{
-          return expect(app.client.isVisible('label[for="WhiteBalance-group"]+div input[type="radio"]+span')).eventually.to.eql([true, true]);
-        });
-      });
-
-      describe('RGBGain', ()=>{
-        describe('R', ()=>{
-          it('label is visible.', ()=>{
-            return expect(app.client.isVisible('label[for="RGBGain-red-group"]')).eventually.to.equal(true);
-          });
-
-          it('slider is visible.', ()=>{
-            return expect(app.client.isVisible('label[for="RGBGain-red-group"]+.slider')).eventually.to.equal(true);
-          });
-        });
-
-        describe('G', ()=>{
-          it('label is visible.', ()=>{
-            return expect(app.client.isVisible('label[for="RGBGain-green-group"]')).eventually.to.equal(true);
-          });
-
-          it('static text is visible.', ()=>{
-            return expect(app.client.isVisible('label[for="RGBGain-green-group"]+.fixed-slider-value')).eventually.to.equal(true);
-          });
-        });
-
-        describe('B', ()=>{
-          it('label is visible.', ()=>{
-            return expect(app.client.isVisible('label[for="RGBGain-blue-group"]')).eventually.to.equal(true);
-          });
-
-          it('slider is visible.', ()=>{
-            return expect(app.client.isVisible('label[for="RGBGain-blue-group"]+.slider')).eventually.to.equal(true);
-          });
+        it('3-radios are visible.', ()=>{
+          return expect(app.client.isVisible('label[for="WhiteBalance-group"]+div input[type="radio"]+span')).eventually.to.eql([true, true, true]);
         });
       });
 
@@ -328,7 +296,8 @@ describe('Contents when the device is connected.', ()=>{
             'group-icon icon-image',
             'row form-group',
             'row form-group',
-            'row form-group',
+            '',
+            '',
             'row form-group',
             'row form-group',
             'row form-group',
