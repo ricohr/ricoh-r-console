@@ -104,12 +104,12 @@ describe('Edit parameters.', ()=>{
     });
   });
 
-  describe('FlickerReduction', ()=>{
-    it('When you click Disable, MTP.FlickerReduction becomes 0.', ()=>{
-      return Helper.expect_current_value_when_button_is_clicked('FlickerReduction', 1, 0);
+  describe('FlickerReductionMode', ()=>{
+    it('When you click Disable, MTP.FlickerReductionMode becomes 0.', ()=>{
+      return Helper.expect_current_value_when_button_is_clicked('FlickerReductionMode', 1, 0);
     })
-    it('When you click Enable, MTP.FlickerReduction becomes 1.', ()=>{
-      return Helper.expect_current_value_when_button_is_clicked('FlickerReduction', 2, 1);
+    it('When you click Enable, MTP.FlickerReductionMode becomes 1.', ()=>{
+      return Helper.expect_current_value_when_button_is_clicked('FlickerReductionMode', 2, 1);
     })
   });
 

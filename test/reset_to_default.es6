@@ -71,12 +71,12 @@ describe('Reset to default.', ()=>{
       });
     });
 
-    describe('FlickerReduction', ()=>{
+    describe('FlickerReductionMode', ()=>{
       it('becomes to default value.', ()=>{
-        Helper.expect_mtpprop_value_is_default(currentProps, 'FlickerReduction');
+        Helper.expect_mtpprop_value_is_default(currentProps, 'FlickerReductionMode');
       });
       it('becomes to default state', ()=>{
-        return Helper.expect_button_states('FlickerReduction', [true, false]);
+        return Helper.expect_button_states('FlickerReductionMode', [true, false]);
       });
     });
 

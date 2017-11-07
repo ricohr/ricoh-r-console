@@ -96,7 +96,7 @@ export default class Properties extends React.Component {
         <RGBGain propName='RGBGain' propDesc={propValues.RGBGain} hideItem={hideRGBGain} onChange={this.onPropChanged.bind(this)}/>
         <ColorTemperature propName='ColorTemperature' propDesc={propValues.ColorTemperature} hideItem={hideColorTemperature} subItem={true} onChange={this.onPropChanged.bind(this)}/>
         <ExposureBiasCompensation propName='ExposureBiasCompensation' propDesc={propValues.ExposureBiasCompensation} onChange={this.onPropChanged.bind(this)}/>
-        <RadioButtons propName='FlickerReduction' propDesc={propValues.FlickerReduction} onChange={this.onPropChanged.bind(this)}/>
+        <RadioButtons propName='FlickerReductionMode' propDesc={propValues.FlickerReductionMode} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='ZenithMode' propDesc={propValues.ZenithMode} onChange={this.onPropChanged.bind(this)}>
           <I18N.Button bsStyle='default' data-i18n='label.retryZenithLock' disabled={!enableZenithModeButton} onClick={()=>this.onPropChanged(ZenithMode_Lock, 'ZenithMode')}/>
         </RadioButtons>

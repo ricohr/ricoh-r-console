@@ -7,7 +7,7 @@
     "ColorTemperature": "色温度",
     "ExposureBiasCompensation": "露出",
     "StillCaptureMode": "撮影モード",
-    "FlickerReduction": "蛍光灯ちらつき低減",
+    "FlickerReductionMode": "蛍光灯ちらつき低減",
     "ZenithMode": "天頂補正",
     "VideoOutput": "映像出力",
     "AudioOutput": "HDMI音声出力",
@@ -98,7 +98,7 @@
     "32773": "HDMIライブストリーミング",
     "32774": "UVCライブストリーミング"
   },
-  "FlickerReduction": {
+  "FlickerReductionMode": {
     "0": "無効",
     "1": "有効"
   },

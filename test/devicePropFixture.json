@@ -36,7 +36,7 @@
         "factory_default_value": 0,
         "values": [-2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
       },
-      "FlickerReduction": {
+      "FlickerReductionMode": {
         "factory_default_value": 0,
         "values": [0, 1]
       },
@@ -126,7 +126,7 @@
         "current": -2000,
         "values": [-2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
       },
-      "FlickerReduction": {
+      "FlickerReductionMode": {
         "factory_default_value": 0,
         "current": 1,
         "values": [0, 1]
