@@ -16,10 +16,12 @@ export default class PropBase extends React.Component {
 
   render() {
     const name = this.props.propName,
-          className = (this.props.hideLabel) ? '': 'param-label';
+          className = (this.props.hideLabel) ? '': 'param-label',
+          subItemClass = (this.props.subItem) ? 'sub-': '',
+          labelClassName = subItemClass + className;
     return (
       <FormGroup className='row'>
-        <I18N.ColWithControlLabel sm={4} htmlFor={name+'-group'} className={className} data-i18n={this.label}/>
+        <I18N.ColWithControlLabel sm={4} htmlFor={name+'-group'} className={labelClassName} data-i18n={this.label}/>
         <Col id={name+'-group'} sm={8}>
           <span data-deviceProperty={name}>
             {this.props.children}

@@ -4,8 +4,10 @@
     "DeviceInfo": "デバイス情報",
     "WhiteBalance": "ホワイトバランス",
     "RGBGain": "ホワイトバランス(RGBゲイン)",
+    "ColorTemperature": "色温度",
     "ExposureBiasCompensation": "露出",
     "StillCaptureMode": "撮影モード",
+    "FlickerReductionMode": "蛍光灯ちらつき低減",
     "ZenithMode": "天頂補正",
     "VideoOutput": "映像出力",
     "AudioOutput": "HDMI音声出力",
@@ -20,6 +22,7 @@
     "AudioInputGain": "音声入力ゲイン",
     "VideoBitrate": "録画ビットレート",
     "retryDetect": "再調整",
+    "retryZenithLock": "再固定",
     "presetList": "プリセット",
     "presetList-load": "プリセット読込",
     "presetList-save": "プリセット保存",
@@ -87,18 +90,24 @@
   },
   "WhiteBalance": {
     "1": "マニュアル",
-    "2": "オートホワイトバランス"
+    "2": "オートホワイトバランス",
+    "32775": "色温度"
   },
   "StillCaptureMode": {
     "32770": "動画",
     "32773": "HDMIライブストリーミング",
     "32774": "UVCライブストリーミング"
   },
+  "FlickerReductionMode": {
+    "0": "無効",
+    "1": "有効"
+  },
   "ZenithMode": {
     "0": "補正しない",
     "1": "上向きで補正",
     "2": "下向きで補正",
-    "3": "自動判定で補正"
+    "3": "自動判定で補正",
+    "4": "固定"
   },
   "VideoOutput": {
     "0": "FullHD",

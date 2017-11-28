@@ -13,21 +13,52 @@ describe('Edit parameters.', ()=>{
     it('When you click Manual, MTP.WhiteBalance becomes 1.', ()=>{
       return Helper.expect_current_value_when_button_is_clicked('WhiteBalance', 1, 1);
     })
-    it('... And RGBGain becomes enable.', ()=>{
-      return app.client.getAttribute('[data-deviceProperty="RGBGain"] .slider', 'class').then(elms=>{
-        elms.map(elm=>{
-          return expect(elm).to.not.string("slider-disable");
-        });
+    it('... And RGBGain appears.', ()=>{
+      return app.client.getAttribute('[data-deviceProperty="RGBGain"] .slider', 'class').then(()=>{
+        return true;
+      }).catch((e)=>{
+        throw '.RGBGain disappears';
+      });
+    })
+    it('... And ColorTemperature disappears.', ()=>{
+      return app.client.getAttribute('[data-deviceProperty="ColorTemperature"] .slider', 'class').then(()=>{
+        throw '.ColorTemperature appears';
+      }).catch((e)=>{
+        return expect(e.type).to.equal("NoSuchElement");
       });
     })
     it('When you click Auto, MTP.WhiteBalance becomes 2.', ()=>{
       return Helper.expect_current_value_when_button_is_clicked('WhiteBalance', 2, 2);
     })
-    it('... And RGBGain becomes disable.', ()=>{
-      return app.client.getAttribute('[data-deviceProperty="RGBGain"] .slider', 'class').then(elms=>{
-        elms.map(elm=>{
-          return expect(elm).to.string("slider-disabled");
-        });
+    it('... And RGBGain disappears.', ()=>{
+      return app.client.getAttribute('[data-deviceProperty="RGBGain"] .slider', 'class').then(()=>{
+        throw '.RGBGain appears';
+      }).catch((e)=>{
+        return expect(e.type).to.equal("NoSuchElement");
+      });
+    })
+    it('... And ColorTemperature disappears.', ()=>{
+      return app.client.getAttribute('[data-deviceProperty="ColorTemperature"] .slider', 'class').then(()=>{
+        throw '.ColorTemperature appears';
+      }).catch((e)=>{
+        return expect(e.type).to.equal("NoSuchElement");
+      });
+    })
+    it('When you click ColorTemperature, MTP.WhiteBalance becomes 32775.', ()=>{
+      return Helper.expect_current_value_when_button_is_clicked('WhiteBalance', 3, 32775);
+    })
+    it('... And RGBGain disappears.', ()=>{
+      return app.client.getAttribute('[data-deviceProperty="RGBGain"] .slider', 'class').then(()=>{
+        throw '.RGBGain appears';
+      }).catch((e)=>{
+        return expect(e.type).to.equal("NoSuchElement");
+      });
+    })
+    it('... And ColorTemperature appears.', ()=>{
+      return app.client.getAttribute('[data-deviceProperty="ColorTemperature"] .slider', 'class').then(()=>{
+        return true;
+      }).catch((e)=>{
+        throw '.ColorTemperature disappears';
       });
     })
   });
@@ -51,6 +82,19 @@ describe('Edit parameters.', ()=>{
     });
   });
 
+  describe('ColorTemperature', ()=>{
+    before(()=>{
+      // set WhiteBalance=ColorTemperature
+      return Actions.Props.Items.click('WhiteBalance', 3);
+    });
+    it('When you click left-end, MTP.ColorTemperature becomes 2500.', ()=>{
+      return Helper.expect_current_value_when_slider_is_clicked('ColorTemperature', 0, 2500);
+    });
+    it('When you click right-end, MTP.ColorTemperature becomes 10000.', ()=>{
+      return Helper.expect_current_value_when_slider_is_clicked('ColorTemperature', 1, 10000);
+    });
+  });
+
   describe('ExposureBiasCompensation', ()=>{
     it('When you click left-end, MTP.ExposureBiasCompensation becomes 2000.', ()=>{
       return Helper.expect_current_value_when_slider_is_clicked('ExposureBiasCompensation', 0, 2000);
@@ -58,6 +102,15 @@ describe('Edit parameters.', ()=>{
     it('When you click right-end, MTP.ExposureBiasCompensation becomes -2000.', ()=>{
       return Helper.expect_current_value_when_slider_is_clicked('ExposureBiasCompensation', 1, -2000);
     });
+  });
+
+  describe('FlickerReductionMode', ()=>{
+    it('When you click Disable, MTP.FlickerReductionMode becomes 0.', ()=>{
+      return Helper.expect_current_value_when_button_is_clicked('FlickerReductionMode', 1, 0);
+    })
+    it('When you click Enable, MTP.FlickerReductionMode becomes 1.', ()=>{
+      return Helper.expect_current_value_when_button_is_clicked('FlickerReductionMode', 2, 1);
+    })
   });
 
   describe('ZenithMode', ()=>{

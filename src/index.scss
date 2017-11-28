@@ -294,6 +294,14 @@ hr {
   padding-left: 38px;
   padding-right: 38px;
 }
+.settings-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 950;
+}
 
 .btn-open-dialog {
   &::after {
@@ -308,6 +316,13 @@ hr {
 
 .param-label {
   text-align: right;
+  &::after {
+    content: "\00a0:";
+  }
+}
+.sub-param-label {
+  text-align: right;
+  padding-right: 0px;
   &::after {
     content: "\00a0:";
   }
@@ -385,8 +400,11 @@ hr {
   .form-group {
     margin-bottom: 8px;
     @media (min-width: 768px) {
-      margin-left: -46px;
+      margin-left: -54px;
     }
+  }
+  .slider.slider-horizontal {
+    margin-left: 22px;
   }
   .fixed-slider-value {
     margin-left: 1em;
@@ -402,6 +420,12 @@ hr {
   font-family: monospace;
   cursor: pointer;
   color: $urlLinkColor;
+}
+
+#ZenithMode-group {
+  button {
+   margin-left: 1em;
+  }
 }
 
 #StitchMode-group {

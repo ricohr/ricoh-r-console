@@ -18,7 +18,7 @@
       },
       "WhiteBalance": {
         "factory_default_value": 2,
-        "values": [1, 2]
+        "values": [1, 2, 32775]
       },
       "RGBGain": {
         "factory_default_value": "180:100:180",
@@ -26,13 +26,23 @@
         "max": "500:100:500",
         "step": "1:0:1"
       },
+      "ColorTemperature": {
+        "factory_default_value": 5000,
+        "min": 2500,
+        "max": 10000,
+        "step": 100
+      },
       "ExposureBiasCompensation": {
         "factory_default_value": 0,
         "values": [-2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
       },
-      "ZenithMode": {
+      "FlickerReductionMode": {
         "factory_default_value": 0,
-        "values": [0, 1, 2, 3]
+        "values": [0, 1]
+      },
+      "ZenithMode": {
+        "factory_default_value": 1,
+        "values": [0, 1, 2, 3, 4]
       },
       "VideoOutput": {
         "factory_default_value": 0,
@@ -95,7 +105,7 @@
       "WhiteBalance": {
         "factory_default_value": 2,
         "current": 1,
-        "values": [1, 2]
+        "values": [1, 2, 32775]
       },
       "RGBGain": {
         "factory_default_value": "180:100:180",
@@ -104,15 +114,27 @@
         "max": "500:100:500",
         "step": "1:0:1"
       },
+      "ColorTemperature": {
+        "factory_default_value": 5000,
+        "current": 2500,
+        "min": 2500,
+        "max": 10000,
+        "step": 100
+      },
       "ExposureBiasCompensation": {
         "factory_default_value": 0,
         "current": -2000,
         "values": [-2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
       },
-      "ZenithMode": {
+      "FlickerReductionMode": {
         "factory_default_value": 0,
-        "current": 3,
-        "values": [0, 1, 2, 3]
+        "current": 1,
+        "values": [0, 1]
+      },
+      "ZenithMode": {
+        "factory_default_value": 1,
+        "current": 4,
+        "values": [0, 1, 2, 3, 4]
       },
       "VideoOutput": {
         "factory_default_value": 0,

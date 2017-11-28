@@ -4,8 +4,10 @@
     "DeviceInfo": "Device information",
     "WhiteBalance": "White balance",
     "RGBGain": "White Balance (RGB Gain)",
+    "ColorTemperature": "Color temperature",
     "ExposureBiasCompensation": "Exposure",
     "StillCaptureMode": "Shooting mode",
+    "FlickerReductionMode": "Reduce Flourescent Flicker",
     "ZenithMode": "Top/Bottom Correction",
     "VideoOutput": "Video Output",
     "AudioOutput": "HDMI Audio Output",
@@ -20,6 +22,7 @@
     "AudioInputGain": "Audio Input Gain",
     "VideoBitrate": "Recording Bit Rate",
     "retryDetect": "Readjustment",
+    "retryZenithLock": "Retry lock",
     "presetList": "Presets",
     "presetList-load": "Load Presets",
     "presetList-save": "Save Presets",
@@ -87,18 +90,24 @@
   },
   "WhiteBalance": {
     "1": "Manual",
-    "2": "Auto white balance"
+    "2": "Auto white balance",
+    "32775": "Color temperature"
   },
   "StillCaptureMode": {
     "32770": "Video",
     "32773": "HDMI live streaming",
     "32774": "UVC live streaming"
   },
+  "FlickerReductionMode": {
+    "0": "Disable",
+    "1": "Enable"
+  },
   "ZenithMode": {
     "0": "Do not correct",
     "1": "Upwards",
     "2": "Downwards",
-    "3": "Auto"
+    "3": "Auto",
+    "4": "Lock"
   },
   "VideoOutput": {
     "0": "Full HD",

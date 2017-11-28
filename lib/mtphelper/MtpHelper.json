@@ -18,6 +18,8 @@
     "WDR":["0xD817","UINT8"],
     "StitchMode":["0xD818","UINT8"],
     "AudioInputGain":["0xD819","UINT8"],
-    "VideoBitrate":["0xD81A","UINT8"]
+    "VideoBitrate":["0xD81A","UINT8"],
+    "FlickerReductionMode":["0xD81B","UINT8"],
+    "ColorTemperature":["0xD81C","INT16"]    
   }
 }

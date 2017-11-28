@@ -11,6 +11,7 @@ import RadioButtons from '../components/RadioButtons';
 import MinMaxSlider from '../components/MinMaxSlider';
 import ReadonlyText from '../components/ReadonlyText';
 import RGBGain from '../components/RGBGain';
+import ColorTemperature from '../components/ColorTemperature';
 import ExposureBiasCompensation from '../components/ExposureBiasCompensation';
 import ResetToDefault from './ResetToDefault';
 import MtpActionCreator from '../data/MtpActionCreator';
@@ -74,22 +75,31 @@ export default class Properties extends React.Component {
         (new MtpActionCreator()).loadProperties();
       }
     }
-    const WhiteBalance_Auto = 2,
+    const WhiteBalance_Manual = 1,
+          WhiteBalance_ColorTemperature = 32775,
           StitchMode_Auto = 1,
-          muteRGBGain = (getDesc(propValues, 'WhiteBalance').current === WhiteBalance_Auto),
+          ZenithMode_Lock = 4,
+          select_WhiteBalance = getDesc(propValues, 'WhiteBalance').current,
+          hideRGBGain = !(select_WhiteBalance === WhiteBalance_Manual),
+          hideColorTemperature = !(select_WhiteBalance === WhiteBalance_ColorTemperature),
           enableStitchModeButton = (getDesc(propValues, 'StitchMode').current === StitchMode_Auto),
-          mute = this.props.appStore.get('mute');
-    console.debug('Properties', {muteRGBGain, enableStitchModeButton, mute});
+          enableZenithModeButton = (getDesc(propValues, 'ZenithMode').current === ZenithMode_Lock),
+          backdrop = this.props.appStore.get('mute')? (<div className='settings-backdrop'/>): ''
     return (
       <div id='settingItems' className='settings-body'>
+        {backdrop}
         <Icon show={showItems} icon='icon-image'/>
         <ReadonlyText propName='StillCaptureMode' propDesc={propValues.StillCaptureMode}>
           <I18N.Button bsStyle='primary' className='btn-right-alignment' data-i18n='label.initializeProps' onClick={this.onResetToDefault.bind(this)}/>
         </ReadonlyText>
         <RadioButtons propName='WhiteBalance' propDesc={propValues.WhiteBalance} onChange={this.onPropChanged.bind(this)}/>
-        <RGBGain propName='RGBGain' propDesc={propValues.RGBGain} mute={muteRGBGain || mute} onChange={this.onPropChanged.bind(this)}/>
-        <ExposureBiasCompensation propName='ExposureBiasCompensation' propDesc={propValues.ExposureBiasCompensation} mute={mute} onChange={this.onPropChanged.bind(this)}/>
-        <RadioButtons propName='ZenithMode' propDesc={propValues.ZenithMode} onChange={this.onPropChanged.bind(this)}/>
+        <RGBGain propName='RGBGain' propDesc={propValues.RGBGain} hideItem={hideRGBGain} onChange={this.onPropChanged.bind(this)}/>
+        <ColorTemperature propName='ColorTemperature' propDesc={propValues.ColorTemperature} hideItem={hideColorTemperature} subItem={true} onChange={this.onPropChanged.bind(this)}/>
+        <ExposureBiasCompensation propName='ExposureBiasCompensation' propDesc={propValues.ExposureBiasCompensation} onChange={this.onPropChanged.bind(this)}/>
+        <RadioButtons propName='FlickerReductionMode' propDesc={propValues.FlickerReductionMode} onChange={this.onPropChanged.bind(this)}/>
+        <RadioButtons propName='ZenithMode' propDesc={propValues.ZenithMode} onChange={this.onPropChanged.bind(this)}>
+          <I18N.Button bsStyle='default' data-i18n='label.retryZenithLock' disabled={!enableZenithModeButton} onClick={()=>this.onPropChanged(ZenithMode_Lock, 'ZenithMode')}/>
+        </RadioButtons>
         <RadioButtons propName='VideoOutput' propDesc={propValues.VideoOutput} {..._VideoOutputImages} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='WDR' propDesc={propValues.WDR} onChange={this.onPropChanged.bind(this)}/>
         <RadioButtons propName='StitchMode' propDesc={propValues.StitchMode} onChange={this.onPropChanged.bind(this)}>
@@ -99,11 +109,11 @@ export default class Properties extends React.Component {
         <HR show={showItems}/>
         <Icon show={showItems} icon='icon-volume'/>
         <RadioButtons propName='AudioOutput' propDesc={propValues.AudioOutput} onChange={this.onPropChanged.bind(this)}/>
-        <MinMaxSlider propName='AudioInputGain' propDesc={propValues.AudioInputGain} mute={mute} onChange={this.onPropChanged.bind(this)}/>
+        <MinMaxSlider propName='AudioInputGain' propDesc={propValues.AudioInputGain} onChange={this.onPropChanged.bind(this)}/>
         <HR show={showItems}/>
         <Icon show={showItems} icon='icon-led'/>
-        <MinMaxSlider propName='StandbyLedBrightness' propDesc={propValues.StandbyLedBrightness} mute={mute} onChange={this.onPropChanged.bind(this)}/>
-        <MinMaxSlider propName='TransmittingLedBrightness' propDesc={propValues.TransmittingLedBrightness} mute={mute} onChange={this.onPropChanged.bind(this)}/>
+        <MinMaxSlider propName='StandbyLedBrightness' propDesc={propValues.StandbyLedBrightness} onChange={this.onPropChanged.bind(this)}/>
+        <MinMaxSlider propName='TransmittingLedBrightness' propDesc={propValues.TransmittingLedBrightness} onChange={this.onPropChanged.bind(this)}/>
         <ResetToDefault ref='resetToDefaultModal' {...this.props}/>
       </div>
     );

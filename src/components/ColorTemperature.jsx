@@ -4,11 +4,13 @@
 //
 
 import React from 'react';
+import {FormGroup} from 'react-bootstrap';
 import PropBase from './PropBase';
 import BootstrapSlider from './bootstrap-slider';
+import * as I18N from './i18n';
 
 
-export default class MinMaxSlider extends React.Component {
+export default class ColorTemperature extends React.Component {
   value() {
     if (this.refs.slider) {
       return this.refs.slider.value();
@@ -26,6 +28,9 @@ export default class MinMaxSlider extends React.Component {
     if (!this.props.propDesc) {
       return (<div/>);
     }
+    if (this.props.hideItem) {
+      return (<div/>);      
+    }
     const data = this.props.propDesc.toObject();
     if (!data.step) {
       return (<div/>);
@@ -34,16 +39,19 @@ export default class MinMaxSlider extends React.Component {
             step: data.step,
             min: data.min,
             max: data.max,
-            ticks: [data.min, data.max, data.max, data.max, data.max, data.max],
-            ticks_labels: [data.min, data.max, '', '', '', ''],
-            ticks_positions: [0, 100, 100, 100, 100, 100],
+            ticks: [data.min, 5000, 7500, data.max],
+            ticks_labels: [data.min, 5000, '', data.max + ' K'],
             value: data.current,
             tooltip_position: 'bottom',
             mute: this.props.mute
           };
+    const imgStyle = {
+            'margin-left': '14px'
+          };
     return (
       <PropBase {...(this.props)}>
-        <BootstrapSlider ref='slider' options={options} onChange={this.onChange.bind(this)}/>
+          <img src='./assets/images/color-temp-bar.png' style={imgStyle} /><br/>
+          <BootstrapSlider ref='slider' options={options} onChange={this.onChange.bind(this)}/>
       </PropBase>
     );
   }
