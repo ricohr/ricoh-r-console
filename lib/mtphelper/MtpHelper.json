@@ -10,6 +10,7 @@
     "RecordingTime":["0xD809","UINT16"],
     "RemainingRecordingTime":["0xD80A","UINT16"],
     "RemainingVideos":["0xD80D","UINT16"],
+    "SleepMode":["0xD80E","UINT8"],
     "ZenithMode":["0xD812","UINT8"],
     "VideoOutput":["0xD813","UINT8"],
     "AudioOutput":["0xD814","UINT8"],

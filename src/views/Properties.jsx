@@ -10,6 +10,7 @@ import * as I18N from '../components/i18n';
 import RadioButtons from '../components/RadioButtons';
 import MinMaxSlider from '../components/MinMaxSlider';
 import ReadonlyText from '../components/ReadonlyText';
+import SleepModeStatus from '../components/SleepModeStatus';
 import RGBGain from '../components/RGBGain';
 import ColorTemperature from '../components/ColorTemperature';
 import ExposureBiasCompensation from '../components/ExposureBiasCompensation';
@@ -78,6 +79,11 @@ export default class Properties extends React.Component {
     const WhiteBalance_Manual = 1,
           WhiteBalance_ColorTemperature = 32775,
           StitchMode_Auto = 1,
+          SleepMode_awake = 0,
+          SleepMode_sleep = 1,
+          SleepMode_current = getDesc(propValues, 'SleepMode').current,
+          SleepModeButtonMode = (SleepMode_current === SleepMode_awake) ? SleepMode_sleep  : SleepMode_awake,
+          SleepModeButtonLabel = (SleepMode_current === SleepMode_awake) ? 'label.SleepMode-shift-sleep' : 'label.SleepMode-shift-awake',
           ZenithMode_Lock = 4,
           select_WhiteBalance = getDesc(propValues, 'WhiteBalance').current,
           hideRGBGain = !(select_WhiteBalance === WhiteBalance_Manual),
@@ -92,6 +98,9 @@ export default class Properties extends React.Component {
         <ReadonlyText propName='StillCaptureMode' propDesc={propValues.StillCaptureMode}>
           <I18N.Button bsStyle='primary' className='btn-right-alignment' data-i18n='label.initializeProps' onClick={this.onResetToDefault.bind(this)}/>
         </ReadonlyText>
+        <SleepModeStatus propName='SleepMode' propDesc={propValues.SleepMode}>
+          <I18N.Button bsStyle='default' data-i18n={SleepModeButtonLabel} onClick={()=>this.onPropChanged(SleepModeButtonMode, 'SleepMode')}/>
+        </SleepModeStatus>
         <RadioButtons propName='WhiteBalance' propDesc={propValues.WhiteBalance} onChange={this.onPropChanged.bind(this)}/>
         <RGBGain propName='RGBGain' propDesc={propValues.RGBGain} hideItem={hideRGBGain} onChange={this.onPropChanged.bind(this)}/>
         <ColorTemperature propName='ColorTemperature' propDesc={propValues.ColorTemperature} hideItem={hideColorTemperature} subItem={true} onChange={this.onPropChanged.bind(this)}/>

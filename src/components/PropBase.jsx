@@ -12,6 +12,7 @@ export default class PropBase extends React.Component {
   constructor(props) {
     super(props);
     this.label = (this.props.hideLabel) ? '': 'label.'+this.props.propName;
+    this.label = (this.props.optLabel === undefined) ? this.label: this.props.optLabel;
   }
 
   render() {

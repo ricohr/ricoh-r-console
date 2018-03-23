@@ -7,6 +7,10 @@
     "ColorTemperature": "色温度",
     "ExposureBiasCompensation": "露出",
     "StillCaptureMode": "撮影モード",
+    "SleepMode": "スリープモード",
+    "SleepMode-title": "状態",
+    "SleepMode-shift-awake": "稼働中へ",
+    "SleepMode-shift-sleep": "スリープ中へ",
     "FlickerReductionMode": "蛍光灯ちらつき低減",
     "ZenithMode": "天頂補正",
     "VideoOutput": "映像出力",
@@ -51,7 +55,7 @@
     "downloadFirmware": "以下のサイトから最新のファームウエアをダウンロードしてください",
     "invalidFileName": "ファイル名が正しくありません",
     "invalidFileContent": "ファイルが正しくありません",
-    "uploading": "転送中です。",
+    "uploading": "転送中です。microSDカードを抜かないでください。",
     "afterUpload": "<p class='emphasis'>以下の手順が完了するまで電源ケーブルを抜かないでください。</p><ol><li>HDMIケーブルを挿している場合はHDMIケーブルを抜きます。</li><li>電源ボタンを押して電源をOFFします。</li><li>電源ボタンを押して電源をONします。</li><li>約20秒間LEDが白色で点滅します。</li><li>LEDが点灯に戻ればファームアップデート完了です。</li></ol>"
   },
   "initializeProps": {
@@ -81,9 +85,9 @@
     "configObjectLoaded": "デバイス起動時の設定を読み込みました",
     "configObjectLoadFailed": "デバイス起動時の設定の読み込みに失敗しました",
     "configObjectStored": "デバイス起動時の設定を書き込みました",
-    "configObjectStoreFailed": "デバイス起動時の設定の書き込みに失敗しました",
+    "configObjectStoreFailed": "デバイス起動時の設定の書き込みに失敗しました。microSDカードが挿入されているか確認してください。",
     "configObjectRemoved": "デバイス起動時の設定を初期化しました",
-    "configObjectRemoveFailed": "デバイス起動時の設定の初期化に失敗しました",
+    "configObjectRemoveFailed": "デバイス起動時の設定の初期化に失敗しました。microSDカードが挿入されているか確認してください。",
     "internalError": "内部処理に失敗しました",
     "FAILED(2019)": "デバイスが動作中です",
     "failedWhileRecording": "録画中は操作できません"
@@ -97,6 +101,10 @@
     "32770": "動画",
     "32773": "HDMIライブストリーミング",
     "32774": "UVCライブストリーミング"
+  },
+  "SleepMode": {
+    "0": "稼働中",
+    "1": "スリープ中"
   },
   "FlickerReductionMode": {
     "0": "無効",
