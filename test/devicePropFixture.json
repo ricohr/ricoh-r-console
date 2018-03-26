@@ -16,6 +16,10 @@
         "factory_default_value": 32773,
         "values": [32770, 32773, 32774]
       },
+      "SleepMode": {
+        "factory_default_value": 0,
+        "values": [0, 1]
+      },
       "WhiteBalance": {
         "factory_default_value": 2,
         "values": [1, 2, 32775]
@@ -101,6 +105,10 @@
         "factory_default_value": 32773,
         "current": 32770,
         "values": [32770, 32773, 32774]
+      },
+      "SleepMode": {
+        "factory_default_value": 0,
+        "values": [0, 1]
       },
       "WhiteBalance": {
         "factory_default_value": 2,

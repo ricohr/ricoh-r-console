@@ -84,6 +84,7 @@ describe('Preset operations.', ()=>{
           '_last_updated',
           'WhiteBalance',
           'RGBGain',
+          'SleepMode',
           'ExposureBiasCompensation',
           'FlickerReductionMode',
           'ZenithMode',

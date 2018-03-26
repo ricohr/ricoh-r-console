@@ -7,6 +7,10 @@
     "ColorTemperature": "Color temperature",
     "ExposureBiasCompensation": "Exposure",
     "StillCaptureMode": "Shooting mode",
+    "SleepMode": "Sleep mode",
+    "SleepMode-title": "State",
+    "SleepMode-shift-awake": "To operating",
+    "SleepMode-shift-sleep": "To sleeping",
     "FlickerReductionMode": "Reduce Flourescent Flicker",
     "ZenithMode": "Top/Bottom Correction",
     "VideoOutput": "Video Output",
@@ -51,7 +55,7 @@
     "downloadFirmware": "Download the latest firmware from the website below",
     "invalidFileName": "Incorrect file name",
     "invalidFileContent": "Incorrect file",
-    "uploading": "Transferring.",
+    "uploading": "Transferring data. Do not remove the microSD card.",
     "afterUpload": "<p class='emphasis'>Do not disconnect the power cable until the procedure below has completed.</p><ol><li>Disconnect the HDMI cable if it is connected to your RICOH R.</li><li>Press the power button on your RICOH R to turn the power off.</li><li>Press the power button on your RICOH R to turn the power on.</li><li>The LED will flash white for about 20 seconds.</li><li>The firmware update is complete once the LED returns to a solid light.</li></ol>"
   },
   "initializeProps": {
@@ -81,9 +85,9 @@
     "configObjectLoaded": "Loaded the device startup settings",
     "configObjectLoadFailed": "Failed to load the device startup settings",
     "configObjectStored": "Wrote the device startup settings",
-    "configObjectStoreFailed": "Failed to write the device startup settings",
+    "configObjectStoreFailed": "Failed to write the device startup settings. Please check that the microSD card has been inserted.",
     "configObjectRemoved": "Device startup settings were reset",
-    "configObjectRemoveFailed": "Failed to reset device startup settings",
+    "configObjectRemoveFailed": "Failed to reset device startup settings. Please check that the microSD card has been inserted.",
     "internalError": "Failed to process internally",
     "FAILED(2019)": "Device is operating",
     "failedWhileRecording": "Cannot operate during recording"
@@ -97,6 +101,10 @@
     "32770": "Video",
     "32773": "HDMI live streaming",
     "32774": "UVC live streaming"
+  },
+  "SleepMode": {
+    "0": "Operating",
+    "1": "Sleeping"
   },
   "FlickerReductionMode": {
     "0": "Disable",

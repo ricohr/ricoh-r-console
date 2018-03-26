@@ -16,6 +16,7 @@ const _PropNames = [
   'ColorTemperature',
   'ExposureBiasCompensation',
   'FlickerReductionMode',
+  'SleepMode',
   'ZenithMode',
   'VideoOutput',
   'WDR',
