@@ -256,6 +256,7 @@ function expect_ui_state(target, expect_value, props) {
 const PropNames = [
   "WhiteBalance",
   "RGBGain",
+  "SleepMode",
   "ColorTemperature",
   "ExposureBiasCompensation",
   "FlickerReductionMode",

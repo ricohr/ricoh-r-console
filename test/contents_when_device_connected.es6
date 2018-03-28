@@ -296,6 +296,7 @@ describe('Contents when the device is connected.', ()=>{
             'group-icon icon-image',
             'row form-group',
             'row form-group',
+            'row form-group',
             '',
             '',
             'row form-group',
